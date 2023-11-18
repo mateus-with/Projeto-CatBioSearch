@@ -255,7 +255,9 @@ public class PaginaInicial extends javax.swing.JFrame {
 
     private void btnCfgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCfgMouseClicked
         // TODO add your handling code here:
-
+        dispose();
+        Config conf = new Config();
+        conf.setVisible(true);
        
     }//GEN-LAST:event_btnCfgMouseClicked
 

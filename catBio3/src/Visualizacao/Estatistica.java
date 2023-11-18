@@ -291,15 +291,19 @@ public class Estatistica extends javax.swing.JFrame {
     private void btnCfg1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCfg1MouseClicked
         // TODO add your handling code here:
         
-        
+         dispose();
+        Config conf = new Config();
+        conf.setVisible(true);
     }//GEN-LAST:event_btnCfg1MouseClicked
 
     private void btnCfg1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCfg1MouseEntered
         // TODO add your handling code here:
+         btnCfg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/configuraçao.png")));
     }//GEN-LAST:event_btnCfg1MouseEntered
 
     private void btnCfg1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCfg1MouseExited
         // TODO add your handling code here:
+         btnCfg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/NotClicked/configuraçaoNotClicked.png")));
     }//GEN-LAST:event_btnCfg1MouseExited
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked

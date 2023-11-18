@@ -222,7 +222,7 @@ public class Relatorio extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tabelaGatos);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 560, 380));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 550, 380));
 
         jLabel4.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -261,7 +261,7 @@ public class Relatorio extends javax.swing.JFrame {
                 btnLimparCamposActionPerformed(evt);
             }
         });
-        jPanel1.add(btnLimparCampos, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 350, 160, -1));
+        jPanel1.add(btnLimparCampos, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 330, 160, -1));
 
         btnCarregarCampos1.setBackground(new java.awt.Color(10, 10, 10));
         btnCarregarCampos1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -287,7 +287,7 @@ public class Relatorio extends javax.swing.JFrame {
                 btnAlterarCamposActionPerformed(evt);
             }
         });
-        jPanel1.add(btnAlterarCampos, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 410, 160, -1));
+        jPanel1.add(btnAlterarCampos, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 390, 160, -1));
 
         btnApagarDados.setBackground(new java.awt.Color(10, 10, 10));
         btnApagarDados.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -300,7 +300,7 @@ public class Relatorio extends javax.swing.JFrame {
                 btnApagarDadosActionPerformed(evt);
             }
         });
-        jPanel1.add(btnApagarDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 570, 120, 30));
+        jPanel1.add(btnApagarDados, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 450, 160, -1));
 
         btnAlterarCampos1.setBackground(new java.awt.Color(10, 10, 10));
         btnAlterarCampos1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -313,7 +313,7 @@ public class Relatorio extends javax.swing.JFrame {
                 btnAlterarCampos1ActionPerformed(evt);
             }
         });
-        jPanel1.add(btnAlterarCampos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 570, 150, 30));
+        jPanel1.add(btnAlterarCampos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 570, 160, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 1570, 1080));
 
@@ -347,7 +347,7 @@ public class Relatorio extends javax.swing.JFrame {
 
     private void btnCadastroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCadastroMouseClicked
         // TODO add your handling code here:
-        dispose();
+         dispose();
         Cadastro cad = null;
         try {
             cad = new Cadastro();
@@ -425,23 +425,23 @@ public class Relatorio extends javax.swing.JFrame {
 
     private void btnAlterarCamposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarCamposActionPerformed
         // TODO add your handling code here:
-
+        
         alterarGato();
         listarValoresGatos();
         limparCampos();
-
+        
     }//GEN-LAST:event_btnAlterarCamposActionPerformed
 
     private void btnApagarDadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnApagarDadosActionPerformed
         // TODO add your handling code here:
-
+        
         excluirGato();
         listarValoresGatos();
         limparCampos();
-
+        
     }//GEN-LAST:event_btnApagarDadosActionPerformed
 
-    private void preencheTabela(ArrayList<GatoDTO> lista) {
+        private void preencheTabela(ArrayList<GatoDTO> lista) {
         try {
 
             GatoDAO objgatodao = new GatoDAO();
@@ -460,31 +460,31 @@ public class Relatorio extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Listar valores VIEW: " + erro);
         }
     }
-
+    
     private void btnAlterarCampos1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlterarCampos1ActionPerformed
         // TODO add your handling code here:
         GatoDAO objgatodao = new GatoDAO();
-
+        
         ArrayList<GatoDTO> lista = objgatodao.PesquisarGato();
-        System.out.println("" + lista.size());
-        lista = objgatodao.ordenaDadosGato(lista, 0, lista.size() - 1);
+        System.out.println(""+lista.size());
+        lista = objgatodao.ordenaDadosGato(lista,0,lista.size()-1);
         for (GatoDTO lista1 : lista) {
-            System.out.println("" + lista1.getNome());
+            System.out.println(""+lista1.getNome());
         }
         preencheTabela(lista);
     }//GEN-LAST:event_btnAlterarCampos1ActionPerformed
 
     private void btnEstatisticaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEstatisticaMouseClicked
         // TODO add your handling code here:
-
+        
         dispose();
         new Estatistica().setVisible(true);
-
+        
     }//GEN-LAST:event_btnEstatisticaMouseClicked
 
     private void btnCfgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCfgMouseClicked
         // TODO add your handling code here:
-        dispose();
+         dispose();
         Config conf = new Config();
         conf.setVisible(true);
     }//GEN-LAST:event_btnCfgMouseClicked
@@ -555,12 +555,13 @@ public class Relatorio extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     /*
-     classe ordenação
-     no gato dao
+    classe ordenação
+    no gato dao
     
     
     
-     */
+    */
+    
     private void listarValoresGatos() {
         try {
 
@@ -570,14 +571,10 @@ public class Relatorio extends javax.swing.JFrame {
             ArrayList<GatoDTO> lista = objgatodao.PesquisarGato();
 
             for (int num = 0; num < lista.size(); num++) {
-                System.out.println("Cor do Gato: " + lista.get(num).getCor());
                 model.addRow(new Object[]{
                     lista.get(num).getIdGato(),
                     lista.get(num).getNome(),
-                    lista.get(num).getRaça(),
-                    lista.get(num).getCor(),
-                    lista.get(num).getIdade(),
-                    lista.get(num).getObs()
+                    lista.get(num).getRaça()
                 });
             }
 
@@ -592,78 +589,64 @@ public class Relatorio extends javax.swing.JFrame {
         txtIdRecebe.setText(tabelaGatos.getModel().getValueAt(setar, 0).toString());
         txtNomeGatoRecebe.setText(tabelaGatos.getModel().getValueAt(setar, 1).toString());
         txtRacaGatoRecebe.setText(tabelaGatos.getModel().getValueAt(setar, 2).toString());
-        //txtIdadeRecebe.setText(tabelaGatos.getModel().getValueAt(setar, 4).toString());
-        //txtCorRecebe.setText(tabelaGatos.getModel().getValueAt(setar, 3).toString());
-        //txtObsRecebe.setText(tabelaGatos.getModel().getValueAt(setar, 5).toString());
     }
 
     private void limparCampos() {
         txtIdRecebe.setText("");
         txtNomeGatoRecebe.setText("");
         txtRacaGatoRecebe.setText("");
-        //txtIdadeRecebe.setText("");
-        //txtCorRecebe.setText("");
-        //txtObsRecebe.setText("");
-
     }
 
     private void alterarGato() {
         int idGato;
-        int idadeGato;
-        String corGato;
-        String obsGato;
         String nomeGato;
         String racaGato;
 
         idGato = Integer.parseInt(txtIdRecebe.getText());
-        // idadeGato = Integer.parseInt(txtIdadeRecebe.getText());
         nomeGato = txtNomeGatoRecebe.getText();
         racaGato = txtRacaGatoRecebe.getText();
-        // corGato = txtCorRecebe.getText();
-        // obsGato = txtObsRecebe.getText();
 
         GatoDTO objGatoDTO = new GatoDTO();
         objGatoDTO.setIdGato(idGato);
         objGatoDTO.setNome(nomeGato);
         objGatoDTO.setRaça(racaGato);
-        //objGatoDTO.setCor(corGato);
-        //objGatoDTO.setIdade(idadeGato);
-        //objGatoDTO.setObs(obsGato);
-
+        
         GatoDAO objgatodao = new GatoDAO();
         objgatodao.alterarGato(objGatoDTO);
-
+        
     }
-
+    
     private void excluirGato() {
         int idGato;
-
+        
         idGato = Integer.parseInt(txtIdRecebe.getText());
-
+        
         GatoDTO objgatodto = new GatoDTO();
         objgatodto.setIdGato(idGato);
-
+        
         GatoDAO objgatodao = new GatoDAO();
         objgatodao.excluirGato(objgatodto);
-
+        
+        
     }
 
     Vector<Integer> idGato = new Vector<Integer>();
-
+    
     /* 
-     public void dadosComboBox(){
-     try {
-     GatoDAO objgatodao = new GatoDAO();
-     ResultSet rs = objgatodao.listarGatos();
+    public void dadosComboBox(){
+        try {
+            GatoDAO objgatodao = new GatoDAO();
+            ResultSet rs = objgatodao.listarGatos();
             
-     while(rs.next()){
-     idGato.addElement(rs.getInt(1));
-     cbxDono.addItem(rs.getString(2));
-     }
-     } catch (Exception erro) {
-     JOptionPane.showMessageDialog(null, "Erro no cbx: " + erro.getMessage());
+            while(rs.next()){
+                idGato.addElement(rs.getInt(1));
+                cbxDono.addItem(rs.getString(2));
+            }
+        } catch (Exception erro) {
+            JOptionPane.showMessageDialog(null, "Erro no cbx: " + erro.getMessage());
             
-     }
-     }
-     */
+        }
+    }
+    */
+    
 }

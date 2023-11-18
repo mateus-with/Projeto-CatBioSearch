@@ -47,7 +47,6 @@ public class Cadastro extends javax.swing.JFrame {
 
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
-        buttonGroup = new javax.swing.ButtonGroup();
         jPanel2 = new javax.swing.JPanel();
         btnHome = new javax.swing.JLabel();
         btnCadastro = new javax.swing.JLabel();
@@ -82,6 +81,7 @@ public class Cadastro extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         boxFemea = new javax.swing.JCheckBox();
+        boxFemea1 = new javax.swing.JCheckBox();
         jPanel5 = new javax.swing.JPanel();
         btnPerfil = new javax.swing.JLabel();
         btnEstatistica = new javax.swing.JLabel();
@@ -261,7 +261,6 @@ public class Cadastro extends javax.swing.JFrame {
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 640, -1, -1));
 
         rbAlto.setBackground(new java.awt.Color(0, 0, 0));
-        buttonGroup.add(rbAlto);
         rbAlto.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         rbAlto.setForeground(new java.awt.Color(255, 255, 255));
         rbAlto.setText("Alta");
@@ -274,7 +273,6 @@ public class Cadastro extends javax.swing.JFrame {
         jPanel1.add(rbAlto, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 660, -1, -1));
 
         rbMedia.setBackground(new java.awt.Color(0, 0, 0));
-        buttonGroup.add(rbMedia);
         rbMedia.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         rbMedia.setForeground(new java.awt.Color(255, 255, 255));
         rbMedia.setText("Média");
@@ -287,7 +285,6 @@ public class Cadastro extends javax.swing.JFrame {
         jPanel1.add(rbMedia, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 690, -1, -1));
 
         rbBaixa.setBackground(new java.awt.Color(0, 0, 0));
-        buttonGroup.add(rbBaixa);
         rbBaixa.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         rbBaixa.setForeground(new java.awt.Color(255, 255, 255));
         rbBaixa.setText("Baixa");
@@ -358,7 +355,17 @@ public class Cadastro extends javax.swing.JFrame {
                 boxFemeaActionPerformed(evt);
             }
         });
-        jPanel1.add(boxFemea, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 400, -1, -1));
+        jPanel1.add(boxFemea, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 400, -1, -1));
+
+        boxFemea1.setForeground(new java.awt.Color(255, 255, 255));
+        boxFemea1.setText("Sim");
+        boxFemea1.setContentAreaFilled(false);
+        boxFemea1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                boxFemea1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(boxFemea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 400, -1, -1));
 
         jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 0, 1250, 1100));
 
@@ -587,6 +594,10 @@ public class Cadastro extends javax.swing.JFrame {
         
     }//GEN-LAST:event_boxFemeaActionPerformed
 
+    private void boxFemea1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boxFemea1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_boxFemea1ActionPerformed
+
     private void btnPerfilMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPerfilMouseClicked
         // TODO add your handling code here:
         
@@ -657,6 +668,7 @@ public class Cadastro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox boxFemea;
+    private javax.swing.JCheckBox boxFemea1;
     private javax.swing.JCheckBox boxPedigree;
     private javax.swing.JLabel btnCadastro;
     private javax.swing.JLabel btnCfg;
@@ -664,7 +676,6 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JLabel btnHome;
     private javax.swing.JLabel btnPerfil;
     private javax.swing.JButton btnSalvar;
-    private javax.swing.ButtonGroup buttonGroup;
     private javax.swing.JLabel cor;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
