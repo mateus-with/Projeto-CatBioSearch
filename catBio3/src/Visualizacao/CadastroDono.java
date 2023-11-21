@@ -236,7 +236,7 @@ public class CadastroDono extends javax.swing.JFrame {
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/Detalhes Básicos.png"))); // NOI18N
         jLabel1.setText("jLabel1");
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/Group 17.png"))); // NOI18N
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/gato_prop2.png"))); // NOI18N
 
         btnSalvar.setBackground(new java.awt.Color(255, 191, 27));
         btnSalvar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -263,7 +263,7 @@ public class CadastroDono extends javax.swing.JFrame {
                         .addGap(482, 482, 482)
                         .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(177, 177, 177)
+                        .addGap(150, 150, 150)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel6)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -277,7 +277,7 @@ public class CadastroDono extends javax.swing.JFrame {
                                 .addComponent(txtEnderecoDono, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel5)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 289, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 316, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel12)
                             .addComponent(boxSexo, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -345,6 +345,9 @@ public class CadastroDono extends javax.swing.JFrame {
 
         btnPerfil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/NotClicked/RelatorionotClicked.png"))); // NOI18N
         btnPerfil.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnPerfilMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnPerfilMouseEntered(evt);
             }
@@ -355,6 +358,9 @@ public class CadastroDono extends javax.swing.JFrame {
 
         btnEstatistica.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/NotClicked/estatisticasNotClicked.png"))); // NOI18N
         btnEstatistica.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnEstatisticaMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnEstatisticaMouseEntered(evt);
             }
@@ -365,6 +371,9 @@ public class CadastroDono extends javax.swing.JFrame {
 
         btnCfg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/NotClicked/configuraçaoNotClicked.png"))); // NOI18N
         btnCfg.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnCfgMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 btnCfgMouseEntered(evt);
             }
@@ -454,14 +463,11 @@ public class CadastroDono extends javax.swing.JFrame {
 
     private void btnCadastroMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCadastroMouseEntered
         // TODO add your handling code here:
-
-        btnCadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/cadastro.png")));
     }//GEN-LAST:event_btnCadastroMouseEntered
 
     private void btnCadastroMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCadastroMouseExited
         // TODO add your handling code here:
 
-        btnCadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/cadastroNotClicked.png")));
     }//GEN-LAST:event_btnCadastroMouseExited
 
     private void btnPerfilMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPerfilMouseEntered
@@ -598,6 +604,32 @@ public class CadastroDono extends javax.swing.JFrame {
          }
          */
     }//GEN-LAST:event_btnSalvarActionPerformed
+
+    private void btnPerfilMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPerfilMouseClicked
+          dispose(); // Fecha a janela atual
+
+        try {
+            new Relatorio().setVisible(true); // Cria e exibe uma nova instância de Relatorio
+        } catch (SQLException ex) {
+            Logger.getLogger(PaginaInicial.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+
+    }//GEN-LAST:event_btnPerfilMouseClicked
+
+    private void btnEstatisticaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEstatisticaMouseClicked
+        // TODO add your handling code here
+           dispose();
+        Estatistica est = new Estatistica();
+        est.setVisible(true);
+    }//GEN-LAST:event_btnEstatisticaMouseClicked
+
+    private void btnCfgMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCfgMouseClicked
+          dispose();
+        
+          Config cfg = new Config();
+        cfg.setVisible(true);
+    }//GEN-LAST:event_btnCfgMouseClicked
 
     /**
      * @param args the command line arguments

@@ -252,14 +252,8 @@ public class Estatistica extends javax.swing.JFrame {
         // TODO add your handling code here:
         
        dispose();
-        try {
-            new Cadastro().setVisible(true);
-        } catch (FontFormatException ex) {
-            Logger.getLogger(Estatistica.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Estatistica.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
+        CadastroDono cadd = new CadastroDono();
+        new CadastroDono().setVisible(true);
     }//GEN-LAST:event_btnCadastro1MouseClicked
 
     private void btnCadastro1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCadastro1MouseEntered

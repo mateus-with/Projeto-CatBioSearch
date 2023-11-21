@@ -82,6 +82,8 @@ public class Cadastro extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         boxFemea = new javax.swing.JCheckBox();
         boxFemea1 = new javax.swing.JCheckBox();
+        txtRaca1 = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         btnPerfil = new javax.swing.JLabel();
         btnEstatistica = new javax.swing.JLabel();
@@ -189,7 +191,7 @@ public class Cadastro extends javax.swing.JFrame {
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/Pedigree.png"))); // NOI18N
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 470, -1, -1));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/Group 18.png"))); // NOI18N
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/gato_proprietario.png"))); // NOI18N
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(278, 72, -1, -1));
 
         txtIdadeGato.setBackground(new java.awt.Color(53, 53, 53));
@@ -366,6 +368,17 @@ public class Cadastro extends javax.swing.JFrame {
             }
         });
         jPanel1.add(boxFemea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 400, -1, -1));
+
+        txtRaca1.setBackground(new java.awt.Color(53, 53, 53));
+        txtRaca1.setFont(new java.awt.Font("Verdana", 0, 11)); // NOI18N
+        txtRaca1.setForeground(new java.awt.Color(204, 204, 204));
+        txtRaca1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
+        jPanel1.add(txtRaca1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, 350, 30));
+
+        jLabel16.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("cpf do Dono");
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 110, -1));
 
         jPanel2.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 0, 1250, 1100));
 
@@ -683,6 +696,7 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -709,6 +723,7 @@ public class Cadastro extends javax.swing.JFrame {
     private javax.swing.JTextField txtNomeGato;
     private javax.swing.JTextField txtObs;
     private javax.swing.JTextField txtRaca;
+    private javax.swing.JTextField txtRaca1;
     // End of variables declaration//GEN-END:variables
 
     public void cadastrarGato() {

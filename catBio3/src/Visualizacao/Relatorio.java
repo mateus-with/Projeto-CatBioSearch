@@ -347,16 +347,9 @@ public class Relatorio extends javax.swing.JFrame {
 
     private void btnCadastroMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCadastroMouseClicked
         // TODO add your handling code here:
-         dispose();
-        Cadastro cad = null;
-        try {
-            cad = new Cadastro();
-        } catch (FontFormatException ex) {
-            Logger.getLogger(Relatorio.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(Relatorio.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        cad.setVisible(true);
+        dispose();
+        CadastroDono cadd = new CadastroDono();
+        new CadastroDono().setVisible(true);
     }//GEN-LAST:event_btnCadastroMouseClicked
 
     private void btnCadastroMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCadastroMouseEntered
