@@ -7,6 +7,8 @@ package Visualizacao;
 
 import DAO.DonoDAO;
 import DTO.DonoDTO;
+import java.awt.FontFormatException;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -572,37 +574,22 @@ public class CadastroDono extends javax.swing.JFrame {
         don.setTelefone(telefone);
         don.setEndereco(endereco);
         
+         dispose();
+        Cadastro Cad = null;
+        try {
+            Cad = new Cadastro();
+        } catch (FontFormatException ex) {
+            Logger.getLogger(CadastroDono.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(CadastroDono.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        Cad.setVisible(true);
+        
         DonoDAO objdonodao = new DonoDAO();
         objdonodao.cadastrarDono(don);
         
-        /* 
-         don.setNomeDono(txtNomeDono.getText());
-         don.setCPF(txtCPF.getText());
-         don.setCidade(txtCidade.getText());
-         don.setEmail(txtEmail.getText());
-         don.setTelefone(txtTelefone.getText());
-         don.setEndereco(txtEnderecoDono.getText());
-
-         Object selectedEstado = boxEstado.getSelectedItem();
-         if (selectedEstado != null) {
-         don.setEstado(selectedEstado.toString());
-         } else {
-         JOptionPane.showMessageDialog(null, "Você tem que adicionar um estado! ");
-         }
+         
         
-         Object selectedSexo = boxSexo.getSelectedItem();
-         if (selectedSexo != null) {
-         don.setSexo(boxSexo.getSelectedItem().toString());
-         } else {
-         JOptionPane.showMessageDialog(null, "Voce tem que selecionar um sexo! ");
-         }
-
-         try {
-         don.cadastrarDono();
-         } catch (SQLException ex) {
-         Logger.getLogger(CadastroDono.class.getName()).log(Level.SEVERE, null, ex);
-         }
-         */
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void btnPerfilMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPerfilMouseClicked

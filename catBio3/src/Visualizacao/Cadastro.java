@@ -497,19 +497,14 @@ public class Cadastro extends javax.swing.JFrame {
     }//GEN-LAST:event_boxPedigreeActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
-        // TODO add your handling code here:
-        cadastrarGato();
-       
-         
-
+        // TODO add your handling code he
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void btnSalvarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSalvarMouseClicked
         // TODO add your handling code here:
-
-        dispose();
-        CadastroDono cadd = new CadastroDono();
-        new CadastroDono().setVisible(true);
+         dispose();
+        ArquivoFATA fta = new ArquivoFATA();
+        fta.setVisible(true);
     }//GEN-LAST:event_btnSalvarMouseClicked
 
     private void txtCorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCorActionPerformed

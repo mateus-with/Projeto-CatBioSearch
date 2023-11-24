@@ -56,8 +56,6 @@ public class PaginaInicial extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         btnPerfil = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
@@ -236,22 +234,6 @@ public class PaginaInicial extends javax.swing.JFrame {
         jPanel12.add(btnPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(-390, 390, 372, -1));
         jPanel12.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, -1, -1));
 
-        jLabel8.setText("jLabel8");
-        jPanel12.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 390, -1, -1));
-
-        jButton1.setText("jButton1");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
-            }
-        });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel12.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 330, -1, -1));
-
         getContentPane().add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(382, 0, 1270, -1));
 
         pack();
@@ -373,19 +355,6 @@ public class PaginaInicial extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnEstMouseClicked
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        // TODO add your handling code here:
-         dispose();
-        Login log = new Login();
-        new Login().setVisible(true);
-
-
-    }//GEN-LAST:event_jButton1MouseClicked
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -427,7 +396,6 @@ public class PaginaInicial extends javax.swing.JFrame {
     private javax.swing.JLabel btnCfg;
     private javax.swing.JLabel btnEst;
     private javax.swing.JLabel btnPerfil;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -437,7 +405,6 @@ public class PaginaInicial extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;

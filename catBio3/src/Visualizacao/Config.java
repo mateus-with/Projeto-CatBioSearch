@@ -34,6 +34,7 @@ public class Config extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         btnPerfil = new javax.swing.JLabel();
         btnEstatistica = new javax.swing.JLabel();
@@ -47,15 +48,23 @@ public class Config extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(15, 15, 15));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/Group 31(1).png"))); // NOI18N
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1540, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(345, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(288, 288, 288))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1080, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(162, 162, 162)
+                .addComponent(jLabel1)
+                .addContainerGap(391, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 0, 1540, 1080));
@@ -318,6 +327,7 @@ public class Config extends javax.swing.JFrame {
     private javax.swing.JLabel btnEstatistica;
     private javax.swing.JLabel btnHome;
     private javax.swing.JLabel btnPerfil;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
